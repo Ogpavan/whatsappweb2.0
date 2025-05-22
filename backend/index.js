@@ -11,6 +11,9 @@ app.use(express.json());
 
 const clients = {};
 
+app.get("/", (req, res) => {
+  res.send("WhatsApp Web.js API");
+});
 // Create session endpoint
 app.post("/create-session", async (req, res) => {
   let { sessionId } = req.body;
